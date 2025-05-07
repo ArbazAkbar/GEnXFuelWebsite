@@ -1,0 +1,142 @@
+/* COLORS */
+:root {
+  --main-bg: #FAF1E6;
+  --light-bg: #FDFAF6;
+  --accent-bg: #E4EFE7;
+  --green: #99BC85;
+  --text-dark: #333;
+  --text-light: #fff;
+}
+
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: var(--main-bg);
+  color: var(--text-dark);
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+/* SPLASH SCREEN */
+#splash-screen {
+  position: fixed;
+  background: var(--green);
+  top: 0; left: 0; right: 0; bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  animation: fadeOut 2s ease 2s forwards;
+}
+
+#splash-screen img {
+  width: 120px;
+  animation: zoomIn 1.5s ease;
+}
+
+@keyframes fadeOut {
+  to { opacity: 0; visibility: hidden; }
+}
+
+@keyframes zoomIn {
+  0% { transform: scale(0.5); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--accent-bg);
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 500;
+}
+
+.navbar .logo img {
+  height: 40px;
+}
+
+.navbar .nav-links {
+  display: flex;
+  list-style: none;
+}
+
+.navbar .nav-links li {
+  margin-left: 1.5rem;
+}
+
+.navbar .nav-links a {
+  text-decoration: none;
+  color: var(--text-dark);
+  font-weight: 500;
+}
+
+.navbar .nav-links a:hover {
+  color: var(--green);
+}
+
+/* HERO SECTION */
+.hero {
+  height: 80vh;
+  background: var(--green);
+  color: var(--text-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.btn {
+  background: var(--light-bg);
+  color: var(--green);
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background: var(--accent-bg);
+}
+
+/* SECTION BLOCKS */
+.section-block {
+  padding: 4rem 2rem;
+  background: var(--light-bg);
+  text-align: center;
+}
+
+.section-block.alt {
+  background: var(--accent-bg);
+}
+
+/* FOOTER */
+footer {
+  background: var(--accent-bg);
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+}

@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block title %}Welcome to GEnX Fuel{% endblock %}
+
+{% block content %}
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Empowering a Greener Future</h1>
+      <p>Discover how our fuel solutions are shaping a cleaner tomorrow.</p>
+      <a href="{{ url_for('solutions') }}" class="btn">Explore Solutions</a>
+    </div>
+  </section>
+
+  <section class="section-block">
+    <h2>What We Do</h2>
+    <p>We innovate sustainable energy solutions designed for impact.</p>
+  </section>
+
+  <section class="section-block alt">
+    <h2>Join Our Mission</h2>
+    <p>Be part of the change. Check out careers that make a difference.</p>
+    <a href="{{ url_for('careers') }}" class="btn">View Careers</a>
+  </section>
+{% endblock %}
